@@ -1,3 +1,46 @@
+Prompt:
+VAI TRO:
+Ban la mot Senior Solution Architect co kinh nghiem thiet ke he thong
+thuong mai dien tu chịu tai cao.
+
+MUC TIEU:
+Viet phan Non-Functional Requirements (NFR) cho he thong Guai-api cua
+du an Shop AI, tap trung vao 3 khia canh ky thuat bat buoc duoi day.
+
+NGU CANH:
+- Du an: Shop AI - nen tang thuong mai dien tu
+- Backend: Guai-api (Spring Boot + Java)
+- Co so du lieu: MySQL
+- Xac thuc: JWT
+- He thong can chiu duoc traffic dot bien trong cac su kien khuyen mai lon
+  (Flash Sale, 11/11, Black Friday)
+- Hien tai chua co chi tieu NFR chinh thuc nao duoc ghi nhan
+
+RANG BUOC - 3 KHIA CANH BAT BUOC:
+
+1. Thoi gian phan hoi (Response Time):
+  - Phai dua ra chi tieu cu the (ms) cho endpoint tra cuu san pham
+  - Phan biet chi tieu luc binh thuong va luc tai cao (peak load)
+  - Neu ro nguong canh bao va nguong loi
+
+2. Hieu suat co so du lieu MySQL:
+  - Phai de xuat chien luoc Indexing cu the cho cac bang lien quan
+    den san pham, gio hang, don hang
+  - Neu ro loai index (single, composite, covering) va ly do chon
+  - Dua ra chi tieu query execution time toi da chap nhan duoc
+
+3. Bao mat va do tre JWT:
+  - Phai dua ra chi tieu thoi gian cap phat token toi da (ms)
+  - Neu ro thoi han Access Token va Refresh Token
+  - Yeu cau ky thuat ve thuat toan ky (signing algorithm)
+  - Xu ly truong hop token bi danh cap (token revocation strategy)
+
+DINH DANG:
+Tra ve tai lieu NFR theo dinh dang Markdown Table voi cac cot:
+| Ma NFR | Khia canh | Mo ta yeu cau | Chi tieu ky thuat | Phuong phap do luong |
+
+Phản hồi từ AI:
+
 # Non-Functional Requirements (NFR) - Guai-api (Shop AI Platform)
 
 Tài liệu này đặc tả các yêu cầu phi chức năng (Non-Functional Requirements - NFR) cho hệ thống **Guai-api** (Spring Boot + Java) thuộc nền tảng thương mại điện tử **Shop AI**, tập trung vào khả năng chịu tải cao, tối ưu cơ sở dữ liệu MySQL và bảo mật hệ thống thông qua JWT trong các sự kiện lưu lượng truy cập đột biến (Flash Sale, 11/11, Black Friday).
